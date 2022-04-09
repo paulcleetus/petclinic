@@ -2,12 +2,13 @@
 Service written in NodeJS as part of the scalable services assignment 
 
 
-Pre-requisites:
-Git 
-Docker
+# Pre-requisites
+- Git 
+- Docker
 
-To Run the service
+# Run the service
 
+Checkout locally the code from repo
 `git clone https://github.com/paulcleetus/petclinic.git`
 
 Build the Docker Image
@@ -31,3 +32,5 @@ See the service output in command line, run
 See the service output in browser, visit
 `http://localhost:49160`
 
+Stop the container
+`docker stop <container id>`
