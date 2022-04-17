@@ -1,24 +1,25 @@
 # petclinic
-Service written in NodeJS as part of the scalable services assignment 
+API Service written in NodeJS, MongoDB (Mongoose) as part of the scalable services assignment 
 
 
 # Pre-requisites
 - Git 
 - Docker
+- Docker-Compose
 
 # Run the service
 
 Checkout locally the code from repo
 `git clone https://github.com/paulcleetus/petclinic.git`
 
-Build the Docker Image
-`docker build . -t pcleetus/node-petclinic`
+Change to the checkout directory and Build the Docker Image
+`docker-compose build`
 
 See the list of Docker Images available
 `docker images`
 
-Run the Docker Image, expose the containers 8081 port to the local machines 49160 port
-`docker run -p 49160:8081 -d pcleetus/node-petclinic`
+Run the Docker Images
+`docker-compose up`
 
 Get the container ID
 `docker ps`
@@ -27,10 +28,23 @@ Get the container log
 `docker logs <container id>`
 
 See the service output in command line, run
-`curl -i localhost:49160`
+`curl -i localhost:8081`
 
 See the service output in browser, visit
-`http://localhost:49160`
+`http://localhost:8081`
 
-Stop the container
+Stop the running containers
 `docker stop <container id>`
+OR
+`Ctrl + C` in the CMD
+
+# Connecting the MongoDB Service
+You can install mongoDB Compass GUI to directly interact with the MongoDB Service Container
+on the URL `mongodb://localhost:27017`
+if username and password are set, update those in connection string
+
+# Testing the API Service
+You can install Postman API testing utility and load the included Postman test collection to test the services when they are running.
+
+
+
