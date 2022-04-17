@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "a3246e9b-422d-41c2-8e70-931302ee7b14",
+		"name": "PetClinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List all vets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/vets",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a specific vet details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/vets/12345",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vets",
+						"12345"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a vet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"prefix\": \"Dr\",\r\n  \"firstname\": \"Paul\",\r\n  \"lastname\": \"Cleetus\",\r\n  \"clinicName\": \"The Favorite Pets Hospital\",\r\n  \"doctorID\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/vets",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a vet",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"prefix\": \"Sr. Dr\",\r\n  \"doctorID\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/vets/625c40327d85dbda6869b40f",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vets",
+						"625c40327d85dbda6869b40f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a vet",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
